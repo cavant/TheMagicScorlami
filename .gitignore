@@ -5,6 +5,13 @@
 *.dm
 *.idsig
 
+# Allow versioned production distribution artifacts in releases/
+!releases/
+!releases/*.apk
+!releases/*.aab
+!releases/README.md
+releases/*-latest.*
+
 # Gradle build cache & output
 .gradle/
 build/
@@ -29,9 +36,9 @@ local.properties
 test_*.json
 release-v1.4.5/
 release_distribution/
-TheMagicScorlami-*.apk
-TheMagicSportslami-*.apk
-TheMagicScorlami-*.aab
+/TheMagicScorlami-*.apk
+/TheMagicSportslami-*.apk
+/TheMagicScorlami-*.aab
 
 # OS files
 .DS_Store

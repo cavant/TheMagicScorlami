@@ -1,6 +1,8 @@
 # 🏈 TheMagicScorlami
 
 [![Platform](https://img.shields.io/badge/Platform-Android_8.0+_(API_24+)-3DDC84?logo=android&logoColor=white)](https://android.com)
+[![GitHub Release](https://img.shields.io/github/v/release/cavant/TheMagicScorlami?logo=github&color=blue)](https://github.com/cavant/TheMagicScorlami/releases)
+[![Download APK](https://img.shields.io/badge/Download-Release_APK_(v1.4.5)-success?logo=android&logoColor=white)](releases/TheMagicScorlami-v1.4.5-release.apk)
 [![Kotlin](https://img.shields.io/badge/Kotlin-2.0+-7F52FF?logo=kotlin&logoColor=white)](https://kotlinlang.org)
 [![Compose](https://img.shields.io/badge/Jetpack_Compose-Material_3-4285F4?logo=jetpackcompose&logoColor=white)](https://developer.android.com/jetpack/compose)
 [![Glance](https://img.shields.io/badge/Glance-AppWidgets-34A853?logo=android&logoColor=white)](https://developer.android.com/jetpack/compose/glance)
@@ -9,6 +11,17 @@
 [![Buy Me a Coffee](https://img.shields.io/badge/Support-Buy_Me_a_Coffee-FFDD00?logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/themagicsalami)
 
 **TheMagicScorlami** is an ultra-fast, lightweight, ad-free sports tracking and live alert app built natively with **Jetpack Compose**, **Glance AppWidgets**, and **Material 3**. Designed from the ground up for sports enthusiasts who demand real-time event updates, instant live notifications, and deep game stats without the clutter, advertisements, or heavy tracking of commercial apps.
+
+---
+
+## 📦 Direct Downloads & Releases
+
+| Artifact | Version | File | Checksum (SHA-256) |
+| :--- | :--- | :--- | :--- |
+| **Signed Release APK** | `v1.4.5` (Build 9) | [**Download APK**](releases/TheMagicScorlami-v1.4.5-release.apk) | `BE01A53F...BC998DD` |
+| **Play Store Bundle** | `v1.4.5` (Build 9) | [**Download AAB**](releases/TheMagicScorlami-v1.4.5-release.aab) | `CA4EF1AB...5E2E33F` |
+
+*For all historical and latest releases, visit the [GitHub Releases Page](https://github.com/cavant/TheMagicScorlami/releases).*
 
 ---
 
@@ -124,14 +137,16 @@ Run automated unit tests:
 ./gradlew testDebugUnitTest
 ```
 
-Build production release APK & Play Store Bundle (`.aab`):
+Build and place production release APK & Play Store Bundle into `releases/`:
 ```bash
-./gradlew assembleRelease bundleRelease
+./gradlew buildReleaseApk bundleRelease
 ```
 
-Artifact outputs will be located in:
-- `app/build/outputs/apk/release/app-release.apk`
-- `app/build/outputs/bundle/release/app-release.aab`
+Artifact outputs are automatically signed and placed in:
+- `releases/TheMagicScorlami-v1.4.5-release.apk`
+- `releases/TheMagicScorlami-v1.4.5-release.aab`
+- `releases/TheMagicScorlami-latest.apk`
+*(Also mirrored in `app/build/outputs/apk/release/app-release.apk`)*
 
 ---
 

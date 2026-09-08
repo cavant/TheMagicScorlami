@@ -89,3 +89,47 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
     debugImplementation(libs.androidx.ui.tooling)
 }
+
+tasks.register("copyReleaseArtifacts") {
+    group = "distribution"
+    description = "Copies signed release APK and AAB bundle to root releases/ directory"
+    doLast {
+        val releaseDir = rootProject.file("releases")
+        if (!releaseDir.exists()) {
+            releaseDir.mkdirs()
+        }
+        val vName = android.defaultConfig.versionName ?: "1.0.0"
+
+        val buildOutputDir = project.layout.buildDirectory.asFile.get()
+        val sourceApk = File(buildOutputDir, "outputs/apk/release/app-release.apk")
+        if (sourceApk.exists()) {
+            val targetApk = File(releaseDir, "TheMagicScorlami-v$vName-release.apk")
+            val latestApk = File(releaseDir, "TheMagicScorlami-latest.apk")
+            sourceApk.copyTo(targetApk, overwrite = true)
+            sourceApk.copyTo(latestApk, overwrite = true)
+            println("Successfully placed Release APK under releases: ${targetApk.name}")
+        }
+
+        val sourceAab = File(buildOutputDir, "outputs/bundle/release/app-release.aab")
+        if (sourceAab.exists()) {
+            val targetAab = File(releaseDir, "TheMagicScorlami-v$vName-release.aab")
+            val latestAab = File(releaseDir, "TheMagicScorlami-latest.aab")
+            sourceAab.copyTo(targetAab, overwrite = true)
+            sourceAab.copyTo(latestAab, overwrite = true)
+            println("Successfully placed Release Bundle under releases: ${targetAab.name}")
+        }
+    }
+}
+
+afterEvaluate {
+    tasks.findByName("assembleRelease")?.finalizedBy("copyReleaseArtifacts")
+    tasks.findByName("bundleRelease")?.finalizedBy("copyReleaseArtifacts")
+
+    tasks.register("buildReleaseApk") {
+        group = "distribution"
+        description = "Builds signed release APK and places it under releases/"
+        dependsOn("assembleRelease")
+    }
+}
+
+
