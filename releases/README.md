@@ -1,4 +1,4 @@
-﻿# 📦 TheMagicScorlami Release Distribution
+# 📦 TheMagicScorlami Release Distribution
 
 This directory contains signed production release builds of **TheMagicScorlami**.
 
@@ -8,8 +8,7 @@ This directory contains signed production release builds of **TheMagicScorlami**
 
 | Artifact | File Name | Size | SHA-256 Checksum | Purpose |
 | :--- | :--- | :--- | :--- | :--- |
-| **Signed Release APK** | [TheMagicScorlami-v1.4.5-release.apk](TheMagicScorlami-v1.4.5-release.apk) | 15.4 MB | BE01A53F24B3A034730862F0BEBE416C875DA5A078528821B74161BF2BC998DD | Direct phone install / sideloading |
-| **Google Play Bundle** | [TheMagicScorlami-v1.4.5-release.aab](TheMagicScorlami-v1.4.5-release.aab) | 15.1 MB | CA4EF1ABDA83E6AF02B322847AB01219DB171773680D55F1084AF34FD5E2E33F | Google Play Store Console distribution |
+| **Signed Release APK** | [TheMagicScorlami-v1.4.5-release.apk](TheMagicScorlami-v1.4.5-release.apk) | 15.4 MB | `BE01A53F24B3A034730862F0BEBE416C875DA5A078528821B74161BF2BC998DD` | Direct phone install / sideloading |
 
 ---
 

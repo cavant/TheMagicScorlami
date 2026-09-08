@@ -14,12 +14,11 @@
 
 ---
 
-## 📦 Direct Downloads & Releases
+## 📦 Direct Download
 
-| Artifact | Version | File | Checksum (SHA-256) |
+| Artifact | Version | Direct Download Link | Checksum (SHA-256) |
 | :--- | :--- | :--- | :--- |
-| **Signed Release APK** | `v1.4.5` (Build 9) | [**Download APK**](releases/TheMagicScorlami-v1.4.5-release.apk) | `BE01A53F...BC998DD` |
-| **Play Store Bundle** | `v1.4.5` (Build 9) | [**Download AAB**](releases/TheMagicScorlami-v1.4.5-release.aab) | `CA4EF1AB...5E2E33F` |
+| **Signed Release APK** | `v1.4.5` (Build 9) | [**Download TheMagicScorlami-v1.4.5-release.apk**](releases/TheMagicScorlami-v1.4.5-release.apk) | `BE01A53F...BC998DD` |
 
 *For all historical and latest releases, visit the [GitHub Releases Page](https://github.com/cavant/TheMagicScorlami/releases).*
 
@@ -137,14 +136,13 @@ Run automated unit tests:
 ./gradlew testDebugUnitTest
 ```
 
-Build and place production release APK & Play Store Bundle into `releases/`:
+Build and place production release APK into `releases/`:
 ```bash
-./gradlew buildReleaseApk bundleRelease
+./gradlew buildReleaseApk
 ```
 
 Artifact outputs are automatically signed and placed in:
 - `releases/TheMagicScorlami-v1.4.5-release.apk`
-- `releases/TheMagicScorlami-v1.4.5-release.aab`
 - `releases/TheMagicScorlami-latest.apk`
 *(Also mirrored in `app/build/outputs/apk/release/app-release.apk`)*
 

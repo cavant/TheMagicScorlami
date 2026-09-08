@@ -8,7 +8,6 @@
 # Allow versioned production distribution artifacts in releases/
 !releases/
 !releases/*.apk
-!releases/*.aab
 !releases/README.md
 releases/*-latest.*
 

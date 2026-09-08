@@ -92,7 +92,7 @@ dependencies {
 
 tasks.register("copyReleaseArtifacts") {
     group = "distribution"
-    description = "Copies signed release APK and AAB bundle to root releases/ directory"
+    description = "Copies signed release APK to root releases/ directory"
     doLast {
         val releaseDir = rootProject.file("releases")
         if (!releaseDir.exists()) {
@@ -109,21 +109,11 @@ tasks.register("copyReleaseArtifacts") {
             sourceApk.copyTo(latestApk, overwrite = true)
             println("Successfully placed Release APK under releases: ${targetApk.name}")
         }
-
-        val sourceAab = File(buildOutputDir, "outputs/bundle/release/app-release.aab")
-        if (sourceAab.exists()) {
-            val targetAab = File(releaseDir, "TheMagicScorlami-v$vName-release.aab")
-            val latestAab = File(releaseDir, "TheMagicScorlami-latest.aab")
-            sourceAab.copyTo(targetAab, overwrite = true)
-            sourceAab.copyTo(latestAab, overwrite = true)
-            println("Successfully placed Release Bundle under releases: ${targetAab.name}")
-        }
     }
 }
 
 afterEvaluate {
     tasks.findByName("assembleRelease")?.finalizedBy("copyReleaseArtifacts")
-    tasks.findByName("bundleRelease")?.finalizedBy("copyReleaseArtifacts")
 
     tasks.register("buildReleaseApk") {
         group = "distribution"

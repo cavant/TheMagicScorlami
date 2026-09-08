@@ -1,4 +1,4 @@
-﻿name: Build & Publish Release
+name: Build & Publish Release
 
 on:
   push:
@@ -27,16 +27,14 @@ jobs:
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v3
 
-      - name: Build Release APK & App Bundle
+      - name: Build Release APK
         run: |
           chmod +x gradlew
-          ./gradlew buildReleaseApk bundleRelease
+          ./gradlew buildReleaseApk
 
-      - name: Upload Artifacts to GitHub Release
+      - name: Upload APK to GitHub Release
         uses: softprops/action-gh-release@v2
         if: startsWith(github.ref, 'refs/tags/')
         with:
-          files: |
-            releases/*.apk
-            releases/*.aab
+          files: releases/*.apk
           generate_release_notes: true
