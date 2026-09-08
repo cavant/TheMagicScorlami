@@ -12,11 +12,12 @@
 
 ---
 
-## 📸 Screenshots
+## 📸 App Showcase
 
-| Live Scores & Action | Favorites & Conferences | Notification Shade Scoreboard |
-| :---: | :---: | :---: |
-| <img src="screenshots/home_scores_live.jpg" width="270" alt="Live Scores Feed" /> | <img src="screenshots/favorites_manager.jpg" width="270" alt="Favorites & Conference Manager" /> | <img src="screenshots/pinned_notifications.jpg" width="270" alt="Pinned Live Notification Scoreboard" /> |
+| 🔥 Top Events Feed | 📊 Excel Box Scores | ⭐ Favorites & Conferences | 🔔 Live Scoreboard Shade |
+| :---: | :---: | :---: | :---: |
+| <a href="screenshots/home_scores_live.png"><img src="screenshots/home_scores_live.png" width="225" alt="Top Events Live Feed" /></a> | <a href="screenshots/box_score_grid.png"><img src="screenshots/box_score_grid.png" width="225" alt="ESPN-Style Box Score Grid" /></a> | <a href="screenshots/favorites_manager.png"><img src="screenshots/favorites_manager.png" width="225" alt="Favorites & Conferences Manager" /></a> | <a href="screenshots/pinned_notifications.png"><img src="screenshots/pinned_notifications.png" width="225" alt="Notification Shade Scoreboard" /></a> |
+| **Top Events Hero Deck**<br>Past 7d finals & next 14d lookahead | **ESPN-Style Grid**<br>Sticky athlete column & bold totals | **Conferences & Teams**<br>SEC/Big Ten & widget toggle | **Notification Shade**<br>Real-time red zone & score alerts |
 
 ---
 
