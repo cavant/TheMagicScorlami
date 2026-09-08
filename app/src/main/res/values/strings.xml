@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TheMagicScorlami</string>
+    <string name="widget_name">Scorlami Scores</string>
+    <string name="widget_description">Live scores, downs, innings, clocks, and bases for your favorite sports teams.</string>
+</resources>

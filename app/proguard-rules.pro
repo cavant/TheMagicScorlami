@@ -1,0 +1,1 @@
+# TheMagicSportslami ProGuard Rules
