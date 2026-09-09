@@ -6,12 +6,12 @@ plugins {
 
 android {
     namespace = "com.themagicscorlami"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.themagicscorlami"
         minSdk = 24
-        targetSdk = 35
+        targetSdk = 36
         versionCode = 9
         versionName = "1.4.5"
 
