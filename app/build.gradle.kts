@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.themagicsportslami.app"
+    namespace = "com.themagicscorlami"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.themagicsportslami.app"
+        applicationId = "com.themagicscorlami"
         minSdk = 24
         targetSdk = 35
         versionCode = 9
